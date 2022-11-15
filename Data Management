@@ -3,13 +3,14 @@ class c:
         c.self = self
         c.list = list
     def size(list):
-          len(list)
+          return len(list)
     def avg(list):
           global a
           a = 0
           for i in list:
-            a = a + 1
-          a/list.size()
+            a = a + i
+          return a/c.size(list)
 data = [23,45,67,24,57,98,35,58,64,83]
 c(data)
 print("Data has "+ str(c.size(data)) + " values.")
+print("And an average of " + str(c.avg(data)))
